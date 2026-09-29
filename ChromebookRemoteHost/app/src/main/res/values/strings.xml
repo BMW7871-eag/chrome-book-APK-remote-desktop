@@ -1,4 +1,0 @@
-<resources>
-    <string name="app_name">Chromebook Remote Host</string>
-    <string name="accessibility_description">Optional compatibility service. It does not bypass ChromeOS input security.</string>
-</resources>

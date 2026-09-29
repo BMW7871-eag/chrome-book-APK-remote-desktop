@@ -1,8 +1,0 @@
-.gradle/
-.idea/
-local.properties
-build/
-app/build/
-app/libs/ngrok-java-native-classes.jar
-app/src/main/jniLibs/
-vendor/
