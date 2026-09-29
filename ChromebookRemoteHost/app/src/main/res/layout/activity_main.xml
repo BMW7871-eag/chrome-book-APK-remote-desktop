@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0B0D12" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Chromebook Remote Host" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <TextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="Remote web access for the capabilities ChromeOS exposes to Android apps."
+            android:textSize="14sp" android:textColor="#AEB5C2"/>
+
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:text="● Offline" android:textSize="17sp" android:textColor="#FF6B6B"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            android:hint="ngrok Auth Token" style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/ngrokToken"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:hint="Remote Password" style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/remotePassword"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:hint="Local Web Server Port" style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/port"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="8080"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/startButton"
+            android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="20dp"
+            android:text="START REMOTE ACCESS"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/stopButton"
+            android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp"
+            android:text="STOP" android:enabled="false" style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+        <TextView android:id="@+id/urlLabel" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Your remote link" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <TextView android:id="@+id/url" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" android:text="Not running" android:textColor="#8FD3FF" android:textIsSelectable="true"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/copyButton"
+            android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp"
+            android:text="COPY LINK" android:enabled="false" style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+        <TextView android:id="@+id/capabilities" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:textColor="#C9CED8" android:textSize="14sp"/>
+        <TextView android:id="@+id/log" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:textColor="#8D96A8" android:textSize="12sp"/>
+    </LinearLayout>
+</ScrollView>
